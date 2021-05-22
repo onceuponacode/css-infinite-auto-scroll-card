@@ -1,0 +1,79 @@
+html,
+body {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    height: 24.3rem;
+    width: 20rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 3.5%;
+    overflow: hidden;
+}
+
+.category {
+    padding: 1rem 1rem 0.25rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #888888;
+}
+
+.title {
+    padding: 0 1rem 0.25rem 1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.autoscroll-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.autoscroll-row-top {
+    display: flex;
+    flex-direction: row;
+    animation: scroll-left 50s linear infinite;
+}
+
+.autoscroll-row-mid {
+    display: flex;
+    flex-direction: row;
+    animation: scroll-left-offset 50s linear infinite;
+}
+
+.autoscroll-row-bot {
+    display: flex;
+    flex-direction: row;
+    animation: scroll-left 50s linear infinite;
+}
+
+.icon {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 25%;
+    margin: 3px;
+}
+
+.icon-outline {
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+}
+
+@keyframes scroll-left {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-left-offset {
+    from {
+        transform: translateX(-13%);
+    }
+    to {
+        transform: translateX(-113%);
+    }
+}
